@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: survey-app-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: survey-python
+  template:
+    metadata:
+      labels:
+        app: survey-python
+    spec:
+      containers:
+        - name: survey-python
+          image: jhansisneha/swe645-hw3-python:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DATABASE_URL
+              value: "mysql+pymysql://admin:admin2025@surveydb.cma9bsrjawrk.us-east-1.rds.amazonaws.com/surveydb"
