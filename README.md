@@ -30,7 +30,3 @@ It was developed to collect and manage prospective student feedback following ca
 | Orchestration    | Kubernetes (via Rancher)                    |
 | API Testing      | Swagger UI, Postman                         |
 
----
-
-## Project Structure
-
